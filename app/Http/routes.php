@@ -15,12 +15,13 @@
 // prikaz svih taskova u bazi
 Route::get('/', function () {
 		//return view('taska');
+		return "Prva ruta";
 });
 
 // dodavanje novog taska
 Route::post('/task', function (Request $request) {
 	$validator = Validator::make($request->all(), [
-		'name' =>'requerd|max:255',
+		'name' => 'requerd|max:255',
 	]);
 	
 	if($validator->fails() ){
